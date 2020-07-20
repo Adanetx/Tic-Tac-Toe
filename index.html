@@ -11,7 +11,93 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1> My Tic-Tac-Toe Project</h1>
-    </body>
+
+    <body class = "container-fluid">
+
+     <h1> My Tic-Tac-Toe Project</h1>
+
+        <p id = "message"></p>
+
+          <form id = "Sign-up" class = "border">
+            <fieldset>
+               <legend>Sign up!</legend>
+          <input name="credentials[email]" type="text" value="an@example.email">
+          <input name="credentials[password]" type="password" value="an example password">
+          <input name="credentials[password_confirmation]" type="password" value="an example password">
+          <button type="submit">Sign Up!</button>
+          </fieldset>
+     </form>
+
+      <form id = "Sign-in" class="border">
+        <fieldset>
+           <legend>Sign in!</legend>
+      <input name="credentials[email]" type="text" value="an@example.email">
+      <input name="credentials[password]" type="password" value="an example password">
+      <button type="submit">Sign In!</button>
+    </fieldset>
+   </form>
+
+   <form id="change-password" class="border">
+       <fieldset>
+          <legend>change-password!</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+         <input type="password" name="passwords[new]" placeholder="New Password">
+         <input type="submit" value="Change Password!">
+         <button type="submit">change-password!</button>
+       </fieldset>  <input placeholder="game ID" type="text" name="game[id]">
+     </form>
+
+<form id="sign-out" class="border">
+<fieldset>
+   <legend>Sign Out!</legend>
+  <button type="submit">Sign Out</button>
+</fieldset>
+</form>
+ <section id = "container1">
+    <div id = "game-message0"></div
+   <div id = "game-message1"</div>
+   <div id = "game-message2"></div>
+   <div id = "game-message3"></div>: {
+      "title": "'"${TITLE}"'",
+
+   <div id = "game-message4"></div>
+   <div id = "game-message5"></div>
+   <div id = "game-message6"></div>
+   <div id = "game-message7"></div>
+   <div id = "game-messge8"></div>
+ </section>
+ <button id = "start">start</button>
+
+
+        <form id="game-create">
+               <input type="text" name="game[cell]" placeholder="game cells">
+
+              <input placeholder="game ID" type="text" name="game[id]">
+              <button type ="submit">Create a Game!</bautton>
+        </form>
+
+
+     <button id="game-index">Get All Games</button>
+
+
+  <form id="game-show">
+      <input placeholder="game ID" type="text" name="game[id]">
+      <button type="submit">Show Games</button>
+</form>
+
+  <form id="game-delete">
+    <input placeholder="game ID" type="text" name="game[id]">
+    <button type="submit">Delete A Game</button>
+  </form>
+
+  <form id="game-update">
+            <input placeholder="game-cell-index" type="text" name="game.cell.index">
+            <input placeholder="game value" type="text"  name="game.cell.value">
+            <input placeholder="game ID" type="text" name="game[id]">
+            <input placeholder="is game over?" type="text" name =game[over]>
+            <button type="submit">Update game</button>
+          </form>>S
+        <div id="content"></div>
+
+</body>
 </html>
