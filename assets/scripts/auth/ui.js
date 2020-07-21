@@ -10,18 +10,19 @@ const singUpSucces = function (response) {
 const signUpFailure = function () {
   $('#message').text('Sign Up failed :(')
   // $('form').trigger('reset')
-  console.log(store)
+  // console.log(store)
 }
 const signInSuccess = function (response) {
   console.log(response)
   $('#message').text('Signed in successfully' + response.user.email)
-  $('form').trigger('reset')
+  // $('form').trigger('reset')
+  console.log(store)
   store.user = response.user
   console.log(store.user.token)
 }
 const signInFailure = function () {
   $('#.message').text('Sign in failed')
-  $('form').trigger('reset')
+  // $('form').trigger('reset')
 }
 const changePasswordSuccess = function () {
   $('#message').text('change password success!')
@@ -32,8 +33,8 @@ const changePasswordFailure = function () {
 }
 const signOutSuccess = function () {
   $('#message').text('Signed you out!')
-  $('#unauthenticated').show()
-  $('#authenticated').hide()
+  // $('#unauthenticated').show()
+  // $('#authenticated').hide()
 
   store.user = null
 }
