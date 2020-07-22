@@ -1,8 +1,7 @@
-
 const config = require('../config')
 const store = require('../store')
 const startGame = function () {
- return $.ajax({
+  return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -11,25 +10,17 @@ const startGame = function () {
     data: '{}'
   })
 }
-c
-// TOKEN="3d864fb952197c7a641e6a450e5797ef"
-curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com/games/" \
-  --header "Authorization: Bearer ${TOKEN}" \
-  --header "Content-Type: application/json" \
-  --data {}
-
-echo
-onst userChoice = function (index, player, over) {
- return $.ajax({
-   headers: {
+const userChoice = function (index, player, over) {
+  return $.ajax({
+    headers: {
       // ui sign in success function
       Authorization: 'Bearer ' + store.user.token
     },
-   url: config.apiUrl + '/games/' + store.game._id,
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
-   data: {
+    data: {
       game: {
-       cell: {
+        cell: {
           index: index,
           value: player
         },
@@ -44,7 +35,7 @@ const gameOver = function () {
       // ui sign in success function
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/game  /' + store.game._id,
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
     data: {
       game: {
@@ -68,8 +59,8 @@ const getGames = function () {
 }
 
 module.exports = {
- startGame,
- userChoice,
- gameOver,
- getGames
+  startGame,
+  userChoice,
+  gameOver,
+  getGames
 }

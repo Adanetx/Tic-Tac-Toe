@@ -15,6 +15,6 @@ $(() => {
   $('#sign-out').on('submit', userEvents.onSignOut)
   $('#on-start').on('click', gameEvent.onStart)
 
-  // $('.board-cell').on('click', gameEvents.onCellClick)
-//   $('#reset').on('click', gameEvents.onReset)
+  $('.board-cell').on('click', gameEvent.onCellClick)
+  $('#reset').on('click', gameEvent.onReset)
 })

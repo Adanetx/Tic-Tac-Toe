@@ -1,3 +1,4 @@
+
 const api = require('./api')
 const ui = require('./ui')
 const onStartGame = function (event) {
@@ -16,18 +17,10 @@ const gameSpots = document.querySelectorAll('.game-spots')
 let currentMove = 'X'
 
 const onReset = () => {
-// # TOKEN="3d864fb952197c7a641e6a450e5797ef"
-curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com/games/" \
-  --header "Authorization: Bearer ${TOKEN}" \
-  --header "Content-Type: application/json" \
-  --data {}
-
-echoZWw3dllZSFV3d2lYU0dsVy9rU2tkdz09
-
   for (let i = 0; i < gameSpots.length; i++) {
-    gameSpots[i].style.pointerEvents = 'auto'ZWw3dllZSFV3d2lYU0dsVy9rU2tkdz09
+    gameSpots[i].style.pointerEvents = 'auto'
     gameSpots[i].innerHTML = ''
-    gameSpots[i].style.backgroundColor = '$green'
+    gameSpots[i].style.backgroundColor = 'rgb(33, 56, 249)'
     api.startGame()
   }
 }
@@ -40,22 +33,14 @@ const onCellClick = (e) => {
     api.userChoice(e.target.dataset.cellIndex, currentMove)
       .then(ui.userChoiceSuccess)
       .catch(ui.userChoiceFailure)
-    $('#' + e.target.id).append('<img class="spot-image" src="../assets/images/XGivingIt.PNG"/>')
+    $('#' + e.target.id).append('<img class="spot-image" src="https://github.com/TheLog1/tic-tac-toe-client/blob/master/images/xGivingit.png?raw=true"/>')
     currentMove = '0'
   } else {
     api.userChoice(e.target.dataset.cellIndex, currentMove)
-      .then(ui.userChoiceSuc
-# TOKEN="3d864fb952197c7a641e6a450e5797ef"
-curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com/games/" \
-  --header "Authorization: Bearer ${TOKEN}" \
-  --header "Content-Type: application/json" \
-  --data {}
-
-echo
-cess)
-      .catch(ui.userCho  iceFailure)
-    $('#' + e.target.id).append('<img class="spot-image" src="../assets/images/OGivingIt.PNG"/>')
-    currentMove = 'X'ZWw3dllZSFV3d2lYU0dsVy9rU2tkdz09
+      .then(ui.userChoiceSuccess)
+      .catch(ui.userChoiceFailure)
+    $('#' + e.target.id).append('<img class="spot-image" src="https://raw.githubusercontent.com/TheLog1/tic-tac-toe-client/master/images/oGivingIt.png"/>')
+    currentMove = 'X'
   }
   e.target.style.pointerEvents = 'none'
 }
