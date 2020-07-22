@@ -11,12 +11,12 @@
 
 the tic-tac-toe games needs the following as a user
 ### as a user I must be
--[x] sign up
--[x] sign in
--[x] able to change password
--[x] signed in user must sign Out
--[x] reset the game
--[x] play repteadly
+- sign up
+- sign in
+- able to change password
+- signed in user must sign Out
+- reset the game
+- play repteadly
 
 here is the diagram of the game looks like
 ![mygame-wireframe](https://i.imgur.com/NX4eVBz.png)

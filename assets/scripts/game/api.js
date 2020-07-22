@@ -12,7 +12,7 @@ const startGame = function () {
   })
 }
 c
- TOKEN="3d864fb952197c7a641e6a450e5797ef"
+// TOKEN="3d864fb952197c7a641e6a450e5797ef"
 curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com/games/" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
@@ -44,7 +44,7 @@ const gameOver = function () {
       // ui sign in success function
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/games/' + store.game._id,
+    url: config.apiUrl + '/game  /' + store.game._id,
     method: 'PATCH',
     data: {
       game: {

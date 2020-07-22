@@ -16,7 +16,7 @@ const gameSpots = document.querySelectorAll('.game-spots')
 let currentMove = 'X'
 
 const onReset = () => {
-# TOKEN="3d864fb952197c7a641e6a450e5797ef"
+// # TOKEN="3d864fb952197c7a641e6a450e5797ef"
 curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com/games/" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
@@ -53,7 +53,7 @@ curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com
 
 echo
 cess)
-      .catch(ui.userChoiceFailure)
+      .catch(ui.userCho  iceFailure)
     $('#' + e.target.id).append('<img class="spot-image" src="../assets/images/OGivingIt.PNG"/>')
     currentMove = 'X'ZWw3dllZSFV3d2lYU0dsVy9rU2tkdz09
   }
