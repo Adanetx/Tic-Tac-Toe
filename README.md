@@ -17,6 +17,10 @@ the tic-tac-toe games needs the following as a user
 - signed in user must sign Out
 - reset the game
 - play repteadly
-
-here is the diagram of the game looks like
+-    - New game POST /games
+ - Update game PATCH /games/:id
+ - View number of games played GET /games
+ - Give feedback to the user after each action's      success or failure.
+ - All forms must clear after submit success
+**here is the diagram of the game looks like**
 ![mygame-wireframe](https://i.imgur.com/NX4eVBz.png)
