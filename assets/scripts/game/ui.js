@@ -36,11 +36,11 @@ const checkGameStatus = (game) => {
       gameSpots.forEach(function (gameSpot) {
         const cellIndex = parseInt(gameSpot.dataset.cellIndex)
         if (winCombo.includes(cellIndex)) {
-          board-cells.styl.backgroundColor = 'green'
-          board-cells.style.pointerEvents = 'none'
+          // board-cells.styl.backgroundColor = 'green'
+          // board-cells.style.pointerEvents = 'none'
         } else {
-          board-cells.style.backgroundColor = 'red'
-          board-cells.style.pointerEvents = 'none'
+          // board-cells.style.backgroundColor = 'red'
+        //  board-cells.style.pointerEvents = 'none'
         }
       })
     }
