@@ -1,7 +1,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const gameCreate = function (formData) {
+const onClickCreate = function (formData) {
   console.log(store)
   return $.ajax({
     headers: {
@@ -9,11 +9,11 @@ const gameCreate = function (formData) {
     },
     url: config.apiUrl + '/games',
     method: 'POST',
-    data: formData
+    data: '{}'
   })
 }
 
-const gamesIndex = function () {
+const onStart = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
@@ -22,16 +22,16 @@ const gamesIndex = function () {
     }
   })
 }
-
-const gamesShow = function (id) {
-  return $.ajax({
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    },
-    url: config.apiUrl + '/games/' + id
-  }
-  )
-}
+//
+// const onStart = function (id) {
+//   return $.ajax({
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     },
+//     url: config.apiUrl + '/games/' + id
+//   }
+//   )
+// }
 
 const gamesDelete = function (id) {
   return $.ajax({
@@ -39,7 +39,7 @@ const gamesDelete = function (id) {
     // to delete a specific movie
     url: config.apiUrl + '/games/' + id,
     method: 'DELETE',
-    headers: {
+    headers: {//
       Authorization: 'Bearer ' + store.user.token
     }
   })
@@ -54,14 +54,15 @@ const gamesUpdate = function (formData) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
+
   }
 
   )
 }
 module.exports = {
 
-  gameCreate,
-  gamesShow,
+  onClickCreate,
+  onStr,
   gamesUpdate,
   gamesDelete,
   gamesIndex

@@ -22,7 +22,9 @@
             <fieldset>
                <legend>Sign up!</legend>
           <input name="credentials[email]" type="text" value="an@example.email">
-          <input name="credentials[password]" type="password" value="an example password">
+          <input name="credentials[password]" type="password" value="an estart-game ">
+
+
           <input name="credentials[password_confirmation]" type="password" value="an example password">
           <button type="submit">Sign Up!</button>
           </fieldset>
@@ -39,12 +41,11 @@
 
    <form id="change-password" class="border">
        <fieldset>
-          <legend>change-password!</legend>
-      <input type="password" name="passwords[old]" placeholder="Old Password">
+         <input type="password" name="passwords[old]" placeholder="Old Password">
          <input type="password" name="passwords[new]" placeholder="New Password">
          <input type="submit" value="Change Password!">
          <button type="submit">change-password!</button>
-       </fieldset>  <input placeholder="game ID" type="text" name="game[id]">
+       </fieldset>
      </form>
 
 <form id="sign-out" class="border">
@@ -53,28 +54,31 @@
   <button type="submit">Sign Out</button>
 </fieldset>
 </form>
-<button id="start-game">Start Game</button>
-       </div>
-        </div>
-        <div class="row">
-          <div class="col-3 box2">winners list</div>
-              <div class="col-xs-10 col-sm-8 col-md-6 game-grid">
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot1"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot2"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot3"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot4"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot5"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot6"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot7"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot8"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot9"></div>
-            </div>
-          </div>
-              <button id="reset">Reset Game</button>
-          <div class="col-3 box4">
-            <p id="status"></p> <p id="message"></p>
-          </div>
-          <div class="col-3 box5">  nice game </div>
-          <div class="col-3 box6">footer</div>
-</body
-</html>
+  </div>
+<button id="on-start">click here to start Game</button>
+
+                    <div class="row">
+
+                    <div class="col-3 box2" id = "message"> the message out put</div>
+                     <div class="col-xs-10 col-sm-8 col-md-6 board-grid">
+                    <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot1" data-cell-index="0"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot2" data-cell-index="1"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot3" data-cell-index="2"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot4" data-cell-index="3"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot5" data-cell-index="4"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot6" data-cell-index="5"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot7" data-cell-index="6"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot8" data-cell-index="7"></div>
+                     <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 board-cells" id="spot9" data-cell-index="8"></div>
+                   </div>
+                        <div id="status"></div>
+                          <div id="winners"> the winner in  the game </div>
+                        </div>
+                          </div>
+
+                      <!-- <div class ="container"> -->
+                      <!-- <button id="start-game">Start Game</button> -->
+                    <button class="reset">Reset Game</button>
+               <!-- </div> -->
+</body>
+       </html>

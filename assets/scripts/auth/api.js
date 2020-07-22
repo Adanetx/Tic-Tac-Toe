@@ -34,6 +34,7 @@ const signIn = function (formData) {
     }
   )
 }
+
 const changePassword = function (formData) {
   console.log(store.user)
   return $.ajax({
@@ -47,7 +48,6 @@ const changePassword = function (formData) {
     data: formData
   })
 }
-
 const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
