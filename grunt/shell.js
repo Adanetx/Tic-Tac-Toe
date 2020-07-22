@@ -1,5 +1,4 @@
 'use strict'
-
 // This command will check if `.gitignore` exists, and ensure that git isn't
 // tracking `node_modules`. If both of the above are true, the deploy will
 // proceed. If `.gitingore` is missing or `node_modules` is tracked, it will
@@ -10,13 +9,11 @@ const checkGitIgnore = `
    else printf "\n\nWARNING: .gitignore is wrong or missing.
    Ask an instructor for assistance!\n\n" && false; fi
 `
-
 const ghPagesList = [
   'index.html',
   'favicon.ico',
   'public'
 ].join(' ')
-
 module.exports = {
   'check-gitignore': {
     command: checkGitIgnore
