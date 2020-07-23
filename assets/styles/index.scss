@@ -76,7 +76,7 @@ body {
   //border-radius: 50px;
   color: $red;
   display: grid;
-  grid-gap: 1px;
+  grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   height: 100%vh;

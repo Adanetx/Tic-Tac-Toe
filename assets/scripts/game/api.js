@@ -13,7 +13,7 @@ const startGame = function () {
 const userChoice = function (index, player, over) {
   return $.ajax({
     headers: {
-      // ui sign in success function
+
       Authorization: 'Bearer ' + store.user.token
     },
     url: config.apiUrl + '/games/' + store.game._id,
@@ -29,10 +29,11 @@ const userChoice = function (index, player, over) {
     }
   })
 }
+
 const gameOver = function () {
   return $.ajax({
     headers: {
-      // ui sign in success function
+
       Authorization: 'Bearer ' + store.user.token
     },
     url: config.apiUrl + '/games/' + store.game._id,

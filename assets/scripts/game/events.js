@@ -13,14 +13,14 @@ const displayGames = function (response) {
   $('#games-played').text(response.games.length)
 }
 
-const gameSpots = document.querySelectorAll('.game-spots')
+const gameSpots = document.querySelectorAll('.board-cells')
 let currentMove = 'X'
 
 const onReset = () => {
   for (let i = 0; i < gameSpots.length; i++) {
     gameSpots[i].style.pointerEvents = 'auto'
     gameSpots[i].innerHTML = ''
-    gameSpots[i].style.backgroundColor = 'rgb(33, 56, 249)'
+    gameSpots[i].style.backgroundColor = 'rgb(37, 59, 24)'
     api.startGame()
   }
 }
@@ -33,21 +33,25 @@ const onCellClick = (e) => {
     api.userChoice(e.target.dataset.cellIndex, currentMove)
       .then(ui.userChoiceSuccess)
       .catch(ui.userChoiceFailure)
-    $('#' + e.target.id).append('<img class="spot-image" src="https://github.com/TheLog1/tic-tac-toe-client/blob/master/images/xGivingit.png?raw=true"/>')
-    currentMove = '0'
-  } else {
+    $('#' + e.target.id).append('<img class="spot-image" src="https://i.imgur.com/8cS2Ijn.png "/>'
+
+    currentMSove = '0'
+serve
+
+  }
+  else {
     api.userChoice(e.target.dataset.cellIndex, currentMove)
       .then(ui.userChoiceSuccess)
       .catch(ui.userChoiceFailure)
-    $('#' + e.target.id).append('<img class="spot-image" src="https://raw.githubusercontent.com/TheLog1/tic-tac-toe-client/master/images/oGivingIt.png"/>')
+    $('#' + e.target.id).append('<img class="spot-image" src="https://i.imgur.com/PkV2xIg.png "/>')
     currentMove = 'X'
   }
   e.target.style.pointerEvents = 'none'
 }
 
 module.exports = {
-  onStartGame,
   onCellClick,
+  onStartGame,
   onReset,
   gameSpots
 }

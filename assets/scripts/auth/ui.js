@@ -1,9 +1,9 @@
 'use strict'
 const store = require('../store')
 
-const singUpSucces = function (response) {
-  console.log(response)
-  $('#message').text('Successfully signed up! + respose.user.email')
+const singUpSucces = function () {
+  // console.log(response)
+  $('#message').text('Successfully signed up! ')
 //  $('form').trigger('reset')
 }
 
@@ -14,11 +14,11 @@ const signUpFailure = function () {
 }
 const signInSuccess = function (response) {
   console.log(response)
-  $('#message').text('Signed in successfully' + response.user.email)
+  $('#message').text('Signed in successfully') // + //response.user.email)
   // $('form').trigger('reset')
-  console.log(store)
+  // console.log(store)
   store.user = response.user
-  console.log(store.user.token)
+  // console.log(store.user.token)
 }
 const signInFailure = function () {
   $('#.message').text('Sign in failed')
@@ -40,7 +40,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  $('#message').text('Sign out failed :(')
+  $('#message').text('Sign out failed ')
 }
 
 module.exports = {
