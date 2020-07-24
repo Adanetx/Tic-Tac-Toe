@@ -26,7 +26,7 @@ the tic-tac-toe games needs the following as a user
 ![mygame-wireframe](https://i.imgur.com/NX4eVBz.png)
 the techinology used for the application are listed here
 1. HTMLL
-2. success
+2. css
 3. JavaScript
 4. Ajax
 5. Authenticated and game appi
