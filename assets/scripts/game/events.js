@@ -26,26 +26,20 @@ const onReset = () => {
 }
 
 const onCellClick = (e) => {
-  // display the move
-  // check winner
-  // switch the player
   if (currentMove === 'X') {
     api.userChoice(e.target.dataset.cellIndex, currentMove)
       .then(ui.userChoiceSuccess)
       .catch(ui.userChoiceFailure)
-    $('#' + e.target.id).append('<img class="spot-image" src="https://i.imgur.com/8cS2Ijn.png "/>'
-
-    currentMSove = '0'
-serve
-
-  }
-  else {
+    $('#' + e.target.id).append('<img class="spot-image" src="https://i.imgur.com/8cS2Ijn.png "/>')
+    currentMove = '0'
+  } else {
     api.userChoice(e.target.dataset.cellIndex, currentMove)
       .then(ui.userChoiceSuccess)
       .catch(ui.userChoiceFailure)
     $('#' + e.target.id).append('<img class="spot-image" src="https://i.imgur.com/PkV2xIg.png "/>')
     currentMove = 'X'
   }
+
   e.target.style.pointerEvents = 'none'
 }
 

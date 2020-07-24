@@ -13,7 +13,7 @@ const winCombos = [
 ]
 const startGameSuccess = function (response) {
   store.game = response.game
-  $('#message').text('Game in progress!')
+  $('#message').text('game is in progress!')
 }
 const startGameFailure = function () {
   $('#message').text('You Need To Sign In!')
@@ -36,11 +36,11 @@ const checkGameStatus = (game) => {
       gameSpots.forEach(function (gameSpot) {
         const cellIndex = parseInt(gameSpot.dataset.cellIndex)
         if (winCombo.includes(cellIndex)) {
-          // board-cells.styl.backgroundColor = 'green'
-          // board-cells.style.pointerEvents = 'none'
+          gameSpot.styl.backgroundColor = 'red'
+          gameSpot.style.pointerEvents = 'none'
         } else {
-          // board-cells.style.backgroundColor = 'red'
-        //  board-cells.style.pointerEvents = 'none'
+          gameSpot.style.backgroundColor = 'blue'
+          gameSpot.style.pointerEvents = 'none'
         }
       })
     }

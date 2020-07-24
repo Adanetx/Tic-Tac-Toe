@@ -13,16 +13,22 @@ const signUpFailure = function () {
   // console.log(store)
 }
 const signInSuccess = function (response) {
-  console.log(response)
+  // console.log(response)
   $('#message').text('Signed in successfully') // + //response.user.email)
   // $('form').trigger('reset')
   // console.log(store)
   store.user = response.user
   // console.log(store.user.token)
+  $('#sign-out').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  //  $('#sign-up-button').hide()
+  $('#change-password-button').show()
 }
 const signInFailure = function () {
   $('#.message').text('Sign in failed')
   // $('form').trigger('reset')
+  $('#sign-up').show()
 }
 const changePasswordSuccess = function () {
   $('#message').text('change password success!')
@@ -37,6 +43,9 @@ const signOutSuccess = function () {
   // $('#authenticated').hide()
 
   store.user = null
+  $('#sign-out').hide()
+  $('#sign-in').show()
+  $('#change-password').hide()
 }
 
 const signOutFailure = function () {

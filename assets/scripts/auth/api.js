@@ -36,7 +36,7 @@ const signIn = function (formData) {
 }
 
 const changePassword = function (formData) {
-  console.log(store.user)
+  // console.log(store.user)
   return $.ajax({
     headers: {
       // Access the token on the `store.user` object

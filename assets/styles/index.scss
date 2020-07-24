@@ -1,17 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
-
+$body-bg-color: $green;
 $border-color: $green;
 $font-color: $light;
 $index-color: $white;
 $border-color: #000;
+$alt-color: $red;
 
-body {
-  background-color: $green;
+body {  background-color: $body-bg-color;
+
 
   }
 
 .alt-color {
-  background-color: $green;
+  background-color: $alt-color;
 }
 
 .box1 {
@@ -23,11 +24,11 @@ body {
 
 .box2 {
 
-  background-color: $green;
-  border: 1px solid $green;
+  background-color: $body-bg-color;
+  border: 1px solid $border-color;
   color: $font-color;
   display: flex;
-  // height: 100vh;
+  height: 40px;
   justify-content: center;
 }
 
@@ -36,8 +37,7 @@ body {
   background-color: $green;
   border: 1px solid $border-color;
   color: $font-color;
-
-  display: flex;
+  display: block;
   height: 400px;
 }
 
@@ -72,18 +72,18 @@ body {
   align-items: center;
   background: $green;
   background-color: $secondary;
-  // border: 10px solid  /$border-color;
-  //border-radius: 50px;
-  color: $red;
+  border: 10px solid $black;
+  border-radius: 50px;
+  color: $yellow;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: 100%vh;
+  height: 600%vh;
 }
 
 .board-cells {
-  background: $green;
+  background: $red;
   cursor: pointer;
   height: 160px;
   width: 160px;
