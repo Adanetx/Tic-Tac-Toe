@@ -1,64 +1,47 @@
-'use strict'
 const store = require('../store')
-
-const singUpSucces = function () {
-  // console.log(response)
-  $('#message').text('Successfully signed up! ')
-//  $('form').trigger('reset')
+const signUpSuccess = function () {
+  $('#message').text('Successfully signed up! Now Sign In!')
 }
-
 const signUpFailure = function () {
-  $('#message').text('Sign Up failed :(')
-  // $('form').trigger('reset')
-  // console.log(store)
+  $('#message').text('Sign Up failed.')
 }
 const signInSuccess = function (response) {
-  // console.log(response)
-  $('#message').text('Signed in successfully') // + //response.user.email)
-  // $('form').trigger('reset')
-  // console.log(store)
+  $('#message').text('Sign in Success!')
   store.user = response.user
-  // console.log(store.user.token)
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
-  //  $('#sign-up-button').hide()
+  $('#sign-up-button').hide()
   $('#change-password-button').show()
 }
 const signInFailure = function () {
-  $('#.message').text('Sign in failed')
-  // $('form').trigger('reset')
+  $('#message').text('Sign in failed')
   $('#sign-up').show()
 }
 const changePasswordSuccess = function () {
   $('#message').text('change password success!')
 }
-
 const changePasswordFailure = function () {
-  $('#message').text('change password failed ')
+  $('#message').text('change password failed')
 }
 const signOutSuccess = function () {
-  $('#message').text('Signed you out!')
-  // $('#unauthenticated').show()
-  // $('#authenticated').hide()
-
+  $('#message').text('sign out success!')
   store.user = null
   $('#sign-out').hide()
   $('#sign-in').show()
-  $('#change-password').hide()
+  $('#change-password-button').hide()
 }
-
 const signOutFailure = function () {
-  $('#message').text('Sign out failed ')
+  $('#message').text('sign out failed')
 }
 
 module.exports = {
-  singUpSucces,
+  signUpSuccess,
   signUpFailure,
   signInFailure,
   signInSuccess,
   changePasswordSuccess,
   changePasswordFailure,
-  signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  signOutSuccess
 }

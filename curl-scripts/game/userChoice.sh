@@ -1,8 +1,19 @@
 
-# TOKEN="3d864fb952197c7a641e6a450e5797ef"
-curl --include --request POST "https://tic-tac-toe-api-development.herokuapp.com/games/" \
+TOKEN="16fbc0cd01252ed1a8d714b016caf7ed"
+ID="5f17040734dc100017db9d6a"
+curl "https://tic-tac-toe-api-development.herokuapp.com/games/${ID}" \
+ --include \
+ --request PATCH \
  --header "Authorization: Bearer ${TOKEN}" \
  --header "Content-Type: application/json" \
- --data {}
+ --data '{
+ "game": {
+   "cell": {
+     "index": 0,
+     "value": "x"
+   },
+   "over": false
+ }
+}'
 
 echo

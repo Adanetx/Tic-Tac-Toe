@@ -13,7 +13,8 @@ const winCombos = [
 ]
 const startGameSuccess = function (response) {
   store.game = response.game
-  $('#message').text('game is in progress!')
+  $('#message').text('Game in progress!')
+  $('.board-cells').css('pointer-events', 'auto')
 }
 const startGameFailure = function () {
   $('#message').text('You Need To Sign In!')
@@ -27,19 +28,17 @@ const userChoiceSuccess = function (response) {
 const checkGameStatus = (game) => {
   const cells = game.cells
   winCombos.forEach(function (winCombo) {
-    // Check if cells[winCombo[0]], cells[winCombo[1]] and cells[winCombo[2]]
-    // all equal the same thing either x or o
     const winningString = cells[winCombo[0]] + cells[winCombo[1]] + cells[winCombo[2]]
     if (winningString === 'XXX' || winningString === '000') {
-      $('#message').text('You Won')
+      $('#message').text(winningString + ' combination is winner!!S')
       api.gameOver()
       gameSpots.forEach(function (gameSpot) {
         const cellIndex = parseInt(gameSpot.dataset.cellIndex)
         if (winCombo.includes(cellIndex)) {
-          gameSpot.styl.backgroundColor = 'red'
+          gameSpot.style.backgroundColor = 'red'
           gameSpot.style.pointerEvents = 'none'
         } else {
-          gameSpot.style.backgroundColor = 'blue'
+          gameSpot.style.backgroundColor = 'red'
           gameSpot.style.pointerEvents = 'none'
         }
       })
@@ -49,10 +48,17 @@ const checkGameStatus = (game) => {
 const userChoiceFailure = function () {
   $('#status').text('user choice failed to complete')
 }
-
+const resetGameSuccess = function (response) {
+  $('#message').text('user reset the game!')
+}
+const resetGameFailure = function () {
+  $('#message').text('failed,  Try again')
+}
 module.exports = {
   startGameFailure,
   startGameSuccess,
   userChoiceSuccess,
-  userChoiceFailure
+  userChoiceFailure,
+  resetGameSuccess,
+  resetGameFailure
 }
