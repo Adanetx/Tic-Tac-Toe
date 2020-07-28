@@ -19,40 +19,41 @@
 
      <div class="container">
                <div class="col-12 box1" >
-                 <button id="sign-up-button">Sign up?</button>
+
+                  <div class="form-group">
+                 <button id="sign-up-button"class="form-control mx-auto btn btn-primary" style="width:250px">Sign up?</button>
                  <form id="sign-up">
-                     <input
-                     name="credentials[email]" placeholder="email here" type="email">
-                     <input name="credentials[password]" placeholder="password here" type="password">
-                     <input name="credentials[password_confirmation]" placeholder="confirm password here" type="password">
-                     <button type="submit">sign up</button>
+                     <input name="credentials[email]" class="form-control mx-auto" style="width:250px" placeholder="email here" type="email">
+                     <input name="credentials[password]"class="form-control mx-auto" style="width:250px" placeholder="password here" type="password">
+                     <input name="credentials[password_confirmation]"class="form-control mx-auto" style="width:250px" placeholder="confirm password here" type="password">
+                     <button type="submit" class="form-control mx-auto btn btn-primary" style="width:250px">sign up</button>
                  </form>
-                 <form id="sign-in">
-                     <input name="credentials[email]" placeholder="email here" type="email"/>
-                     <input name="credentials[password]" placeholder="password here" type="password"/>
-                     <button type="submit">sign in</button>
+               </div>
+                    <form id="sign-in">
+                     <input name="credentials[email]"class="form-control mx-auto" style="width:250px" placeholder="email here" type="email"/>
+                     <input name="credentials[password]"class="form-control mx-auto" style="width:250px" placeholder="password here" type="password"/>
+                     <button type="submit"class="form-control mx-auto btn btn-primary" style="width:250px">sign in</button>
+                     </form>
+                    <form id="change-password">
+                     <input name="passwords[old]"class="form-control mx-auto" style="width:250px" placeholder="old password" type="password">
+                     <input name="passwords[new]"class="form-control mx-auto" style="width:250px" placeholder="new password" type="password">
+                     <button type="submit"class="form-control mx-auto" style="width:250px">change-cpassword</button>
                  </form>
-                 <button id="change-password-button">Change Password?</button>
-                 <form id="change-password">
-                     <input name="passwords[old]" placeholder="old password" type="password">
-                     <input name="passwords[new]" placeholder="new password" type="password">
-                     <button type="submit">change password</button>
-                 </form>
-                 <button class="sign-out" id="sign-out">Sign Out</button>
+                 <button  id="sign-out"class="form-control mx-auto btn btn-danger" style="width:250px" type='submit'>Sign Out</button>
                </div>
              </div>
 
              <div class="container">
-               <div class = "my-class">
-         <button id="on-game">Start</button>
-         <button id="reset">Reset Game</button>
+               <div class = "my-class m-3">
+         <button id="on-game" class="btn btn-info">Start</button>
+         <button id="reset" class="btn btn-primary" >Reset Game</button>
        </div>
          <div class="row">
-           <div class="col-4 box2">
+           <div class="col-4 col-md-2 col-lg-4 box2">
              <!-- <h4>games played</h4> -->
-             <div id="games-played"> number of game played</div>
+             <div id="games-played" class="align-right">games-played</div>
                </div>
-                      <div class="col-xs-4 col-sm-4 col-md-4 board-grid">
+                      <div class="col-xs-4 col-sm-4 col-md-8 col-lg-4 board-grid">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell1" data-cell-index="0"></div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell2" data-cell-index="1"></div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell3" data-cell-index="2"></div>
@@ -64,7 +65,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell9" data-cell-index="8"></div>
                       </div>
                       <div class="col-4 col-sm-4 c0l-md-4 col-lg-4 col box4">
-                        <div id="status">information</div>
+                        <div id="status"> information</div>
                         <div id="message"></div>
                       </div>
                     </div>

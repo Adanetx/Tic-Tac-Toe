@@ -10,7 +10,7 @@ const onStartGame = function (event) {
     .then(displayGames)
 }
 const displayGames = function (response) {
-  $('#games-played').text(response.games.length)
+  $('#games-played').text(response.games.length + ' times played.')
 }
 
 const gameSpots = document.querySelectorAll('.board-cells')
@@ -20,11 +20,12 @@ const onReset = () => {
   for (let i = 0; i < gameSpots.length; i++) {
     gameSpots[i].innerHTML = ''
     gameSpots[i].style.backgroundColor = '$red'
+
     gameSpots[i].style.pointerEvents = 'none'
     // gameSpots[i].style.pointerEvents = 'none'
     // api.startGame()
   }
-  $('#message').text('game reseted, make sure you sign in and click strat')
+  $('#message').text('game reseted, make sure you sign in and click start')
   $('#status').text('')
 }
 

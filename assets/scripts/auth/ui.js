@@ -6,7 +6,7 @@ const signUpFailure = function () {
   $('#message').text('Sign Up failed.')
 }
 const signInSuccess = function (response) {
-  $('#message').text('Sign in Success!')
+  $('#message').text('Sign in Success!, click start button to start')
   store.user = response.user
   $('#sign-out').show()
   $('#sign-up').hide()
@@ -38,6 +38,7 @@ const signOutFailure = function () {
 module.exports = {
   signUpSuccess,
   signUpFailure,
+
   signInFailure,
   signInSuccess,
   changePasswordSuccess,

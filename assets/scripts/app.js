@@ -12,6 +12,8 @@ $(() => {
   $('#sign-up').hide()
   $('#change-password-button').hide()
   $('#change-password').hide()
+  // $('.my-class').hide()
+  // $('.board-grid').hide()
   $('#sign-up-button').on('click', authEvents.showSignUp)
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
