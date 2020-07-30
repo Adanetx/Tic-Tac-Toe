@@ -23,7 +23,7 @@ the tic-tac-toe games needs the following as a user
  - Give feedback to the user after each action's      success or failure.
  - All forms must clear after submit success
 **here is the diagram of the game looks like**
-![mygame-wireframe](https://i.imgur.com/NX4eVBz.png)
+![mygame-wireframe](https://i.imgur.com/xx6k1Uq.png)
 the techinology used for the application are listed here
 1. HTMLL
 2. css

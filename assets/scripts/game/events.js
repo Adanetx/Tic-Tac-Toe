@@ -25,7 +25,7 @@ const onReset = () => {
     // gameSpots[i].style.pointerEvents = 'none'
     // api.startGame()
   }
-  $('#message').text('game reseted, make sure you sign in and click start')
+  $('#message').text('reseted, click start')
   $('#status').text('')
 }
 
@@ -54,4 +54,5 @@ module.exports = {
   onStartGame,
   onReset,
   gameSpots
+  // isTieGame
 }

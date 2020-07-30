@@ -12,32 +12,29 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-
-    <body>
-
+   <body>
      <h1> My Tic-Tac-Toe Project</h1>
-
-     <div class="container">
+      <div class="container">
                <div class="col-12 box1" >
-
-                  <div class="form-group">
+                   <div class="form-group">
                  <button id="sign-up-button"class="form-control mx-auto btn btn-primary" style="width:250px">Sign up?</button>
                  <form id="sign-up">
                      <input name="credentials[email]" class="form-control mx-auto" style="width:250px" placeholder="email here" type="email">
                      <input name="credentials[password]"class="form-control mx-auto" style="width:250px" placeholder="password here" type="password">
                      <input name="credentials[password_confirmation]"class="form-control mx-auto" style="width:250px" placeholder="confirm password here" type="password">
                      <button type="submit" class="form-control mx-auto btn btn-primary" style="width:250px">sign up</button>
-                 </form>
-               </div>
+                   </form>
+                  </div>
                     <form id="sign-in">
                      <input name="credentials[email]"class="form-control mx-auto" style="width:250px" placeholder="email here" type="email"/>
                      <input name="credentials[password]"class="form-control mx-auto" style="width:250px" placeholder="password here" type="password"/>
                      <button type="submit"class="form-control mx-auto btn btn-primary" style="width:250px">sign in</button>
                      </form>
+                     <button id="change-password-button">Change Password?</button>
                     <form id="change-password">
                      <input name="passwords[old]"class="form-control mx-auto" style="width:250px" placeholder="old password" type="password">
                      <input name="passwords[new]"class="form-control mx-auto" style="width:250px" placeholder="new password" type="password">
-                     <button type="submit"class="form-control mx-auto" style="width:250px">change-cpassword</button>
+                     <button type="submit"class="form-control mx-auto btn btn-secondary" style="width:250px">change-password</button>
                  </form>
                  <button  id="sign-out"class="form-control mx-auto btn btn-danger" style="width:250px" type='submit'>Sign Out</button>
                </div>
@@ -71,8 +68,4 @@
                     </div>
                   </div>
                 </body>
-
-
-
-
-                </html>
+             </html>

@@ -1,5 +1,6 @@
 const store = require('../store')
 const api = require('./api')
+// const ev = require('./events')
 const gameSpots = document.querySelectorAll('.board-cells')
 const winCombos = [
   [0, 1, 2],
@@ -12,25 +13,40 @@ const winCombos = [
   [6, 4, 2]
 ]
 const startGameSuccess = function (response) {
+  $('#message').show()
+  $('#games-played').show()
+  $('.board-grid').show()
+  $('#status').show()
+  $('#change-password-button').hide()
+  $('#change-password').hide()
+  $('#reset').show()
   store.game = response.game
   $('#message').text('Game in progress!')
   $('.board-cells').css('pointer-events', 'auto')
 }
 const startGameFailure = function () {
+  $('#message').show()
+  $('#on-game').hide()
+  $('#reset').hide()
+  $('#games-played').hide()
+  $('.board-grid').hide()
+  $('#status').hide()
   $('#message').text('You Need To Sign In!')
 }
 const userChoiceSuccess = function (response) {
+  $('#message').show()
   store.game = response.game
   $('#status').text('user picked a box!')
 
   checkGameStatus(store.game)
 }
 const checkGameStatus = (game) => {
+  $('#message').show()
   const cells = game.cells
   winCombos.forEach(function (winCombo) {
     const winningString = cells[winCombo[0]] + cells[winCombo[1]] + cells[winCombo[2]]
     if (winningString === 'XXX' || winningString === '000') {
-      $('#message').text(winningString + ' combination is winner!!S')
+      $('#message').text(winningString.charAt(0) + ' is  a winner')
       api.gameOver()
       gameSpots.forEach(function (gameSpot) {
         const cellIndex = parseInt(gameSpot.dataset.cellIndex)
@@ -46,13 +62,16 @@ const checkGameStatus = (game) => {
   })
 }
 const userChoiceFailure = function () {
+  $('#message').show()
   $('#status').text('user choice failed to complete')
 }
 const resetGameSuccess = function (response) {
+  $('#message').show()
   $('#message').text('user reset the game!')
 }
 const resetGameFailure = function () {
-  $('#message').text('failed,  Try again')
+  $('#message').show()
+  $('#message').text('failed, try it')
 }
 module.exports = {
   startGameFailure,
