@@ -143,6 +143,7 @@ we  need event to create event functions for all Athenticated an game functions
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: 600%vh;
+  height: 300%vh;
 }
 ```
+I planed to increase the numbers of the boards for the next to  be just take little comolex thinking with the players. 

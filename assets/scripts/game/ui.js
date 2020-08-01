@@ -21,7 +21,9 @@ const startGameSuccess = function (response) {
   $('#change-password').hide()
   $('#reset').show()
   store.game = response.game
-  $('#message').text('Game in progress!')
+
+  $('#message').text('game in progress')
+
   $('.board-cells').css('pointer-events', 'auto')
 }
 const startGameFailure = function () {
@@ -43,11 +45,13 @@ const userChoiceSuccess = function (response) {
 const checkGameStatus = (game) => {
   $('#message').show()
   const cells = game.cells
+  let count = 0
   winCombos.forEach(function (winCombo) {
+    // ++count
     const winningString = cells[winCombo[0]] + cells[winCombo[1]] + cells[winCombo[2]]
     if (winningString === 'XXX' || winningString === '000') {
       $('#message').text(winningString.charAt(0) + ' is  a winner')
-      api.gameOver()
+      ++count
       gameSpots.forEach(function (gameSpot) {
         const cellIndex = parseInt(gameSpot.dataset.cellIndex)
         if (winCombo.includes(cellIndex)) {
@@ -58,11 +62,11 @@ const checkGameStatus = (game) => {
           gameSpot.style.pointerEvents = 'none'
         }
       })
+      api.gameOver()
     }
   })
 }
 const userChoiceFailure = function () {
-  $('#message').show()
   $('#status').text('user choice failed to complete')
 }
 const resetGameSuccess = function (response) {
