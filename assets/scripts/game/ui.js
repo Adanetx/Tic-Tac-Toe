@@ -45,13 +45,13 @@ const userChoiceSuccess = function (response) {
 const checkGameStatus = (game) => {
   $('#message').show()
   const cells = game.cells
-  let count = 0
+  // let counter = 0
   winCombos.forEach(function (winCombo) {
-    // ++count
+    // ++counter
     const winningString = cells[winCombo[0]] + cells[winCombo[1]] + cells[winCombo[2]]
     if (winningString === 'XXX' || winningString === '000') {
       $('#message').text(winningString.charAt(0) + ' is  a winner')
-      ++count
+
       gameSpots.forEach(function (gameSpot) {
         const cellIndex = parseInt(gameSpot.dataset.cellIndex)
         if (winCombo.includes(cellIndex)) {
