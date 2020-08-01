@@ -43,18 +43,18 @@ body {  background-color: $body-bg-color;
   display: block;
   height: 150px;
 }
-
-.box5 {
-  align-items: center;
-  background-color: $green;
-  border: 1px solid $white;
-  color: $font-color;
-  display: flex;
-  height: 100px;
-
-
-  justify-content: center;
-}
+//
+// .box5 {
+//   align-items: center;
+//   background-color: $green;
+//   border: 1px solid $white;
+//   color: $font-color;
+//   display: flex;
+//   height: 100px;
+//
+//
+//   justify-content: center;
+// }
 //
 // .box6 {
 //   align-items: center;
@@ -83,7 +83,7 @@ body {  background-color: $body-bg-color;
   grid-gap: 1px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: 600px;
+  height: 300px;
   text-align: center;
 }
 
@@ -109,11 +109,11 @@ h1 {
 }
 
 .spot-image {
-  height: inherit;
+  // height: inherit;
   // height: 70px;
   //  width: 70px;
-  // height: 80%;
-  width: 80%;
+  height: 80%;
+  width: 50%;
 }
 
 .my-class {
