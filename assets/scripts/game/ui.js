@@ -67,8 +67,6 @@ const checkGameStatus = (game) => {
         }
       })
       api.gameOver()
-    } else if (game.cells.every(val => val) && (winningString !== 'XXX' || winningString !== 'OOO')) {
-      $('#message').text('tied')
     }
   })
 }
