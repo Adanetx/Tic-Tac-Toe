@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>tic-tac-toe-game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+   <body>
+     <h1> My Tic-Tac-Toe Project</h1>
+<div class="head6">
+     <h6 class="head6">click start button first to click game board after each reset.</h6>
+   </div>
+      <div class="container">
+               <div class="col-12 box1" >
+                   <div class="form-group">
+                 <button id="sign-up-button"class="form-control mx-auto btn btn-primary" style="width:250px">Sign up?</button>
+                 <form id="sign-up">
+                     <input name="credentials[email]" class="form-control mx-auto" style="width:250px" placeholder="email here" type="email">
+                     <input name="credentials[password]"class="form-control mx-auto" style="width:250px" placeholder="password here" type="password">
+                     <input name="credentials[password_confirmation]"class="form-control mx-auto" style="width:250px" placeholder="confirm password here" type="password">
+                     <button type="submit" class="form-control mx-auto btn btn-primary" style="width:250px">sign up</button>
+                   </form>
+                  </div>
+                    <form id="sign-in">
+                     <input name="credentials[email]"class="form-control mx-auto" style="width:250px" placeholder="email here" type="email"/>
+                     <input name="credentials[password]"class="form-control mx-auto" style="width:250px" placeholder="password here" type="password"/>
+                     <button type="submit"class="form-control mx-auto btn btn-primary" style="width:250px">sign in</button>
+                     </form>
+                     <button id="change-password-button" class = "btn btn-warning form-control mx-auto" style="width:250px">Change Password?</button>
+                    <form id="change-password">
+                     <input name="passwords[old]"class="form-control mx-auto" style="width:250px" placeholder="old password" type="password">
+                     <input name="passwords[new]"class="form-control mx-auto" style="width:250px" placeholder="new password" type="password">
+                     <button type="submit"class="form-control mx-auto btn btn-secondary" style="width:250px">save-change</button>
+                 </form>
+                 <button  id="sign-out"class="form-control mx-auto btn btn-danger" style="width:250px" type='submit'>Sign Out</button>
+               </div>
+             </div>
+
+             <div class="container">
+               <div class = "my-class m-3">
+         <button id="on-game" class="btn btn-info">Start</button>
+         <button id="reset" class="btn btn-primary" >Reset Game</button>
+       </div>
+         <div class="row">
+           <div class="col-2 col-sm-3 col-md-3 col-lg-3 box2">
+             <!-- <h4>games played</h4> -->
+             <div id="games-played" class="align-right">games-played</div>
+               </div>
+                      <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6 board-grid">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell1" data-cell-index="0"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell2" data-cell-index="1"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell3" data-cell-index="2"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell4" data-cell-index="3"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell5" data-cell-index="4"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell6" data-cell-index="5"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell7" data-cell-index="6"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell8" data-cell-index="7"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 board-cells" id="cell9" data-cell-index="8"></div>
+                      </div>
+                      <div class="col-2 col-sm-3 c0l-md-3 col-lg-3 col box4">
+                        <div id="status"> information</div>
+                        <div id="message"></div>
+                      </div>
+                    </div>
+                  </div>
+                </body>
+             </html>
