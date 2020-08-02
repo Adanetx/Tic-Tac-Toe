@@ -48,7 +48,17 @@ const onCellClick = (e) => {
 
   e.target.style.pointerEvents = 'none'
 }
-
+// let counterSquare = 0
+// const isTieGame = function (event) {
+//   $('.board-cell').on('click', function () {
+//     const tieCount = ++counterSquare
+//     if (tieCount === 8) {
+//       $('#message').text('Tied')
+//       counterSquare = 0
+//     }
+//   })
+// }
+// isTieGame()
 module.exports = {
   onCellClick,
   onStartGame,
