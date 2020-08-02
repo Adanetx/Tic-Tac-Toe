@@ -13,6 +13,7 @@ const winCombos = [
   [6, 4, 2]
 ]
 const startGameSuccess = function (response) {
+  $('.head6').show()
   $('#message').show()
   $('#games-played').show()
   $('.board-grid').show()
@@ -27,6 +28,7 @@ const startGameSuccess = function (response) {
   $('.board-cells').css('pointer-events', 'auto')
 }
 const startGameFailure = function () {
+  $('.head6').show()
   $('#message').show()
   $('#on-game').hide()
   $('#reset').hide()
@@ -37,12 +39,14 @@ const startGameFailure = function () {
 }
 const userChoiceSuccess = function (response) {
   $('#message').show()
+  $('.head6').show()
   store.game = response.game
   $('#status').text('user picked a box!')
 
   checkGameStatus(store.game)
 }
 const checkGameStatus = (game) => {
+  $('.head6').show()
   $('#message').show()
   const cells = game.cells
   // let counter = 0
@@ -63,17 +67,22 @@ const checkGameStatus = (game) => {
         }
       })
       api.gameOver()
+    } else if (game.cells.every(val => val) && (winningString !== 'XXX' || winningString !== 'OOO')) {
+      $('#message').text('tied')
     }
   })
 }
 const userChoiceFailure = function () {
+  $('.head6').show()
   $('#status').text('user choice failed to complete')
 }
 const resetGameSuccess = function (response) {
+  $('.head6').show()
   $('#message').show()
   $('#message').text('user reset the game!')
 }
 const resetGameFailure = function () {
+  $('.head6').show()
   $('#message').show()
   $('#message').text('failed, try it')
 }

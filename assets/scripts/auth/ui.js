@@ -2,13 +2,15 @@ const store = require('../store')
 const signUpSuccess = function () {
   $('#message').show()
   $('#message').text('Successfully signed up! Now Sign In!')
-  $('')
+  $('.head6').hide()
 }
 const signUpFailure = function () {
   $('#message').show()
   $('#message').text('Sign Up failed.')
+  $('.head6').hide()
 }
 const signInSuccess = function (response) {
+  $('.head6').hide()
   $('#message').show()
   $('#message').text('Sign in Success!, click start button to start')
   store.user = response.user
@@ -22,19 +24,23 @@ const signInSuccess = function (response) {
 //   $('#reset').hide()
 }
 const signInFailure = function () {
+  $('.head6').hide()
   $('#message').show()
   $('#message').text('Sign in failed')
   $('#sign-up').show()
 }
 const changePasswordSuccess = function () {
+  $('.head6').hide()
   $('#message').show()
   $('#message').text('change password success!')
 }
 const changePasswordFailure = function () {
+  $('.head6').hide()
   $('#message').show()
   $('#message').text('change password failed')
 }
 const signOutSuccess = function () {
+  $('.head6').hide()
   $('#message').show()
   $('#reset').hide()
   $('#games-played').hide()
@@ -52,6 +58,7 @@ const signOutSuccess = function () {
   $('#change-password-button').hide()
 }
 const signOutFailure = function () {
+  $('.head6').hide()
   $('#message').show()
   $('#message').text('sign out failed')
 }

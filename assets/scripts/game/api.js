@@ -44,7 +44,7 @@ const gameOver = function () {
           index: -1,
           value: ''
         },
-        over: true
+        over: false
       }
     }
   })
