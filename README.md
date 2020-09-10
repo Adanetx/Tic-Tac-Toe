@@ -146,4 +146,14 @@ we  need event to create event functions for all Athenticated an game functions
   height: 300%vh;
 }
 ```
-I planed to increase the numbers of the boards for the next to  be just take little comolex thinking with the players. 
+
+| Verb   | URI Pattern            |
+|--------|------------------------|
+| POST   | `/posts/:id/comments`  |
+| PATCH  | `/posts/:id/comments/:commentid` |
+| DELETE | `/posts/:id/comments/:commentid` |
+| GET      | `/posts`        |
+| GET      | `/posts/:id`|
+| POST     | `/posts`|
+| PATCH    | `/posts/:id`|
+| DELETE  | `/posts/:id`|
